@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <meta charset="UTF-8">
+        <title>サイトメニュー</title>
+        <link rel="stylesheet" href="/common/ja-JP/common.css">
+        <link rel="icon" href="/common/ja-JP/icon.ico">
+        <script>
+            fetch("/common/ja-JP/blog/header.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#menu").innerHTML = data);
+            fetch("/common/ja-JP/footer.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#footer").innerHTML = data);
+          </script>
+    </head>
+    <body>
+        <div id="menu" style="display: inline;"></div>
+        <div class="main_content">
+            <h1>Blog</h1>
+            <div id="blog">
+                <div id="blog_title">
+                    ブログメニュー
+                </div>
+                <div id="blog_content">
+                    PCはこのページにおいてキーを用いて移動ができます。<br>
+                    ブラウザバックはback、上のディレクトリへはup、サイトトップへはtop<br>
+                    23日分の記事へは23と打てば移動できます。
+                </div>
+                <div id="blog_content">
+                    ディレクトリツリー<br>
+                    ===========<br>
+                    <a href="/ja-JP/Blog/index.html">ブログトップ</a><br>
+                    　　　┗━━ <a href="/ja-JP/Blog/2024/index.html">2024年</a><br>
+                    　　　　　　　┗━━ 8月←<br>
+                    　　　　　　　　　　&nbsp;┣━━ <a href="./23.html">23日</a><br>
+                    　　　　　　　　　　&nbsp;┣━━ <a href="./24.html">24日</a><br>
+                    　　　　　　　　　　&nbsp;┣━━ <a href="./25.html">25日</a><br>
+                    　　　　　　　　　　&nbsp;┗━━ <a href="./28.html">28日</a><br>
+                </div>
+                <div id="blog_content">
+                    4個のアイテム
+                </div>
+            </div>
+        </div>
+        <div id="footer" style="display: inline;"></div>
+            <script src="/common/cheet.min.js" type="text/javascript"></script>
+            <script>
+                cheet('t o p', function()
+                {
+                    window.location.href = "../../../"
+                });
+                cheet('u p', function()
+                {
+                    window.location.href = "../"
+                });
+                cheet('b a c k', function()
+                {
+                    history.back();
+                });
+
+                
+                cheet('2 3', function()
+                {
+                    window.location.href = "./23.html"
+                });
+                cheet('2 4', function()
+                {
+                    window.location.href = "./24.html"
+                });
+                cheet('2 6', function()
+                {
+                    window.location.href = "./26.html"
+                });
+                cheet('2 5', function()
+                {
+                    window.location.href = "./25.html"
+                });
+                cheet('2 8', function()
+                {
+                    window.location.href = "./28.html"
+                });
+                cheet('2 9', function()
+                {
+                    window.location.href = "./29.html"
+                });
+                cheet('3 0', function()
+                {
+                    window.location.href = "./30.html"
+                });
+                cheet('3 1', function()
+                {
+                    window.location.href = "./31.html"
+                });
+            </Script>
+        </div>
+    </body>
+</html>
