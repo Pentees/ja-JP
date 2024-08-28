@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <meta charset="UTF-8">
+        <title>ようこそ</title>
+        <link rel="stylesheet" href="../common/ja-JP/common.css">
+        <link rel="icon" href="../common/ja-JP/common.css">
+        <script>
+            fetch("../common/ja-JP/header.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#menu").innerHTML = data);
+            fetch("../common/ja-JP/footer.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#footer").innerHTML = data);
+          </script>
+    </head>
+    <body>
+        <div id="menu" style="display: inline;"></div>
+        <div class="main_content">
+            <h2 style="font-weight: 500;">サイトの制作主について</h2>
+            <h5><br></h5>
+            <h3>生まれと職</h3>
+            2008年生まれ、ねずみ年のおうし座<br>
+            16歳、学生(理系)です。<br>
+            <br>
+            <h3>好きなゲーム</h3>
+            スーパーマリオ、Minecraft、東方Project、ブルーアーカイブ<br>
+            <br>
+            <h3>よく(たまに)やること</h3>
+            言語の習得(Duolingo)、遠くに日帰り旅行、推しを愛でる、夜更かし、プログラミング<br>
+            あとは、溜まった宿題の処理とか　←大体これ<br>
+            <br>
+            <h3>好きな言葉</h3>
+            「思うは招く」(植松電機 社長・植松 努氏)<br>
+            <br>
+            <h3>扱えるプログラム言語</h3>
+            お古の言語しか扱えないポンコツです(Python? Java? なにそれ、おいしいの？)<br>
+            デスクトップだとC/C++(Cは11、C++は14)＆標準Win32API、Visual Basic<br>
+            Web系だとHTML、CSS、JavaScript<br>
+            <br>
+            <h3>好きな食べもん、飲みもん</h3>
+            ポテト、豚骨ラーメン(白濁だったら最高)、お好み焼き(大阪のほうのヤツ)、カレーメシ(溶けるチーズがあるとなおよし)、コーラ、ココア<br>
+            <br>
+            <h3>好きな曲</h3>
+            「<nobr translate="no">Running in the 90's(MAX COVERI/頭文字D 挿入歌)</nobr>」、「St. Thomas(Sonny Rollins)」、<nobr translate="no">「Responsibility (Nor</nobr>/ブルアカOST No.155)」、「紅楼 ~ Easten Dream...(ZUN/東方紅魔郷) などなど...<br>
+            <br>
+            <h3>なんか一言</h3>
+            こんなページ見てる暇があるなら、もっと他ののためになりそうな知恵をつけろ<br>
+        </div>
+        <div id="footer" style="display: inline;"></div>
+    </body>
+</html>

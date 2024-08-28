@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <title>開発の裏側とか</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/common/common.css">
+        <link rel="icon" href="/common/icon.ico">
+        <script>
+            fetch("/common/header.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#menu").innerHTML = data);
+            fetch("/common/footer.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#footer").innerHTML = data);
+          </script>
+    </head>
+    <body id="bd">
+        <div id="menu" style="display: inline;"></div>
+        <div class="main_content" style="padding-left: 10px;">
+            <h1 class="title" style="padding-top: 5px;">サイトのお話</h1>
+            <div style="padding-left: 10px;">
+                サイトを作った時のこととか、どうゆうのがアクセスできるのかっていうことをただ書いたページです
+            </div>
+            <h3 class="title">アクセス可能なOSの要件</h3>
+            <div style="padding-left: 10px;">
+                かなり古いものじゃなかったらだいたい動くだろうっていうコードになってます<br>
+                IEだったら、Javascriptが動かなくてメニュバーとフッターでないし、そもそもアドレス入力以外でここに来れてないでしょう<br>
+                画面は横幅480pxあれば表示できるようにしています<br>
+                blog以外のページでは画像がまったくないのでとても低速な回線でも1分もあれば、テキストは読み込み終わって表示できるでしょう<br>
+                AndroidとかiPhoneといったモバイル機器の表示には対応していないので、サイトを開いたら多少の表示崩れが起きるかも<br>
+            </div>
+            <br>
+            <h3 class="title">ページの裏話とか</h3>
+            <div style="padding-left: 10px;">
+                build.html上で[1,9,1,9]の順でキーを押すとこ↑こ↓に来れます、汚いキーですねぇ<br>
+                全ページ共通の背景の色とメニューバーはWindows 95(32ビットモード状態)が元のもんです<br>
+                どっかに隠しコードを埋めてますので、探してみるとなんかなつかしいものが出てくるかも<br>
+            </div>
+            <br>
+            <h3 class="title">サイトを作ったわけとか</h3>
+            <div style="padding-left: 10px;">
+                <a href="https://ikayakich.github.io/Ikasashi_HP/" style="color: rgb(0, 255, 0);">某・刺身兄貴</a>のサイトを見てhtmlいじくったのが最初<br>
+                <h6><br></h6>
+                <div><a style="color: rgb(192, 0, 0); background-color:  rgb(192,192,192); font-weight: 700;">↑目に悪い色(蛍光緑)なんで目にダメージ大、注意！</a></div>
+                <h6><br></h6>
+                真っ暗な部屋でこのサイトを開いても目に来るダメージを少なく、見やすいような設計にってのが一番<br>
+                蛍光色とかほんとに目に来ちゃうからね、開いた瞬間ムスカ大佐状態になっちゃうんだよね<br>
+            </div>
+            <br>
+            <h3 class="title">名前の由来とか</h3>
+                Intel製CPUのブランド名・Pentiumのギリシャ語の数詞・Pentaと<br>
+                チーTASが好きだったからTASをくっつけてPentas<br>
+                (思い付きで名前つけてるのでそんな深い意味は)ないです<br>
+        </div>
+        <div id="footer" style="display: inline;"></div>
+    </body>
+</html>

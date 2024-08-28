@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <title>メニュー</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../common/common.css">
+        <link rel="icon" href="../common/icon.ico">
+        <script>
+            fetch("../common/header.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#menu").innerHTML = data);
+            fetch("../common/footer.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#footer").innerHTML = data);
+          </script>
+    </head>
+    <body>
+        <div id="menu" style="display: inline;"></div>
+        <div id="main">
+            <h1>
+                Menu
+            </h1>
+            <h5><br></h5>
+            一応のサイトマップです
+            <ul style="list-style: none; padding-left: 10px;">
+                <li><a href="./index.html">TOPページ</a></li>
+                <li><a href="./build.html">サイトのバージョン情報</a></li>
+                <li><a href="./detail.html">サイト主の細かな情報</a></li>
+                <li><a href="./Blog/index.html">日記(?)</a></li>
+            </ul>
+        </div>
+        <div id="footer" style="display: inline;"></div>
+    </body>
+</html>

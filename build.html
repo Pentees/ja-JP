@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <title>ビルド情報</title>
+        <link rel="stylesheet" href="../common/ja-JP/common.css" type="text/css">
+        <link rel="icon" href="../common/ja-JP/icon.ico">
+        <script>
+            fetch("../common/ja-JP/header.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#menu").innerHTML = data);
+            fetch("../common/ja-JP/footer.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#footer").innerHTML = data);
+          </script>
+    </head>
+    <body>
+        <div id="menu"></div>
+        <div class="main">
+            <h1>サイトの情報</h1>
+            <div id="main_body">
+            サイトのバージョン:2.0.2409<br>
+            日本語ページのバージョン:1.1.2409<br>
+            <br>
+            公開日 2023.11.5<br>
+            <br>
+            最終更新日(サイト) 2024.8.28<br>
+            最終更新日(日本語ページ) 2024.8.28<br>
+            <br>
+            <h4 style="font-weight: 550; text-indent: 0.5rem;">過去の追加・削除の履歴</h4>
+            <div style="padding-left: 1rem;">
+                <div>
+                    <div>
+                        2023-11-6 サイト開設(v1.0.2311)
+                    </div>
+                    <div style="padding-left: 1rem;">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        2024-08-22 サイトを更新(v1.0.2408)<br>
+                    </div>
+                    <div style="padding-left: 1rem;">
+                        背景デザインを修正<br>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        2024-08-23 サイトを更新(v1.0.2408a)<br>
+                    </div>
+                    <div style="padding-left: 1rem;">
+                        Blogを追加<br>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        2024-08-24 サイトを更新(v1.0.2408b)<br>
+                    </div>
+                    <div style="padding-left: 1rem;">
+                        英語版追加に伴う新しい日本語ページの場所を開設<br>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        2024-08-24 サイトを更新(v2.0.2409)<br>
+                    </div>
+                    <div style="padding-left: 1rem;">
+                        日本語版のサイトをv1.0.2408bの新設された場所へ移設<br>
+                        英語版追加<br>
+                        バージョンは日本版ページがサイト全体とは別になる<br>
+                        日本語版:v1.1.2409、英語版:v1.0.2409<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="footer" style="display: inline;"></div>
+            <script>
+                var today = new Date();
+                var date = today.getFullYear() + "." + today.getMonth() + "." + today.getDate();
+                var hanshinCommand = [49,57,49,57];
+                var inputCommand = [];
+                document.onkeydown = function(e)
+                {
+                    inputCommand.push(e.keyCode);
+                    var inputCommandLen = inputCommand.length;
+                    var inputCode = inputCommand[inputCommandLen - 1];
+                    var commandCode = hanshinCommand[inputCommandLen - 1];
+                    if (inputCode === commandCode)
+                    {
+                        if (inputCommandLen === hanshinCommand.length)
+                        {
+                            inputCommand.length = 0;    
+                            console.log = "隠しコード:\"野獣\"を呼び出しました。"
+                            location.replace("sc.html");
+                        }
+                    }
+                    else
+                    {
+                        inputCommand.length = 0;
+                    }
+                }
+            </script>
+        <br>
+    </body>
+</html>
