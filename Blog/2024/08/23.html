@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <meta charset="UTF-8">
+        <title>2024年8月23日分</title>
+        <link rel="stylesheet" href="/common/ja-JP/common.css">
+        <link rel="icon" href="/common/ja-JP/icon.ico">
+        <script>
+            fetch("/common/ja-JP/blog/header.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#menu").innerHTML = data);
+            fetch("/common/ja-JP/footer.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#footer").innerHTML = data);
+          </script>
+    </head>
+    <body style="overflow-y: scroll;">
+        <div id="menu" style="display: inline;"></div>
+        <div class="main_content">
+            <h1>Blog</h1>
+            <div id="blog">
+                <div id="blog_title">
+                    試験的に書き込み
+                </div>
+                <div id="blog_content">
+                    PCはこのページにおいてキーを用いて移動ができます。<br>
+                    ブラウザバックはback、上のディレクトリへはup、サイトトップへはtop<br>
+                    今いるディレクトリ(2024/08/)へはcdと打つとそれぞれ移動できます。
+                </div>
+                <div id="blog_content">
+                    アルファベット<br>
+                    1234567890<br>
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+                    <br>
+                    かな文字(3種)<br>
+                    <div lang="ja-JP">
+                        あいうえお　アイウエオ　ｱｲｳｴｵ<br>
+                    </div>
+                    <br>
+                    注音記号<br>
+                    <div lang="zh-TW">
+                        ㄅㄆㄇㄈ ㄚㄠㄢㄤ ˇˋˊ˙<br>
+                    </div>
+                    <br>
+                    ハングル<br>
+                    <div lang="ko-KR">
+                        ㅇ ㅏ ㅣ ㅡ ㅔ ㅓ<br>
+                        아녕하세요<br>
+                    </div>
+                    <br>
+                    CKJ統一漢字<br>
+                    <nobr lang="ja-JP">桜(jp)</nobr> <nobr lang="zh-CN">樱(zh-cn)</nobr> <nobr lang="zh-TW">櫻(zh-tw)</nobr> <nobr lang="ko-KR">櫻(앵)(ko)</nobr><br>
+                    <br>
+                    2024.8.23(Fri) 22:50 (JST/UTC+9)
+                </div>
+                <div id="blog_content">
+                    <div style="text-align: center;">
+                    これが最初の投稿です<br>
+                    </div>
+                    <div style="text-align: right; padding-right: 10px;">
+                        <a href="./24.html">次の投稿へ</a><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" style="display: inline;"></div>
+            <script src="/common/cheet.min.js" type="text/javascript"></script>
+            <script>
+                cheet('t o p', function()
+                {
+                    window.location.href = "/HP/"
+                });
+                cheet('u p', function()
+                {
+                    window.location.href = "../"
+                });
+                cheet('c d', function()
+                {
+                    window.location.href = "./"
+                });
+                cheet('b a c k', function()
+                {
+                    history.back();
+                });
+                cheet('n e x t', function()
+                {
+                    window.location.href = "./24.html"
+                });
+                cheet('p r e v i o u s', function()
+                {
+                    alert("これが最初の投稿です。\nこれ以上遡れません。")
+                });
+     </Script>
+        </div>
+    </body>
+</html>

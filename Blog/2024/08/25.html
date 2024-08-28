@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ja-JP">
+    <head>
+        <meta charset="UTF-8">
+        <title>2024年8月25日分</title>
+        <link rel="stylesheet" href="/common/ja-JP/common.css">
+        <link rel="icon" href="/common/ja-JP/icon.ico">
+        <script>
+            fetch("/common/ja-JP/blog/header.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#menu").innerHTML = data);
+            fetch("/common/ja-JP/footer.html")
+              .then((response) => response.text())
+              .then((data) => document.querySelector("#footer").innerHTML = data);
+          </script>
+    </head>
+    <body>
+        <div id="menu" style="display: inline;"></div>
+        <div class="main_content">
+            <h1>Blog</h1>
+            <div id="blog">
+                <div id="blog_title">
+                    サイトの今後
+                </div>
+                <div id="blog_content">
+                    PCはこのページにおいてキーを用いて移動ができます。<br>
+                    ブラウザバックはback、上のディレクトリへはup、サイトトップへはtop<br>
+                    今いるディレクトリ(2024/08/)へはcdと打つとそれぞれ移動できます。
+                </div>
+                <div id="blog_content" style="overflow-y: scroll;">
+                    夏休み最後の日曜日(休みは30まで)になってしまいました。正直、夏休みあと2週間あっていいよ、ほんと<br>
+                    宿題が全然終わってないよ～、まずいよ～、終わらせに行くんだけど<br>
+                    さて、タイトルのお話でもしていこうかな。<br>
+                    <br>
+                    このサイトは今のところ、日本語だけの対応ですが、自己満のために夏休みが終わる前までに英語版を公開します<br>
+                    ちなみに、このBlogは暫定的に日本語専用のサービスとして提供して、英語版にはこのサービスを提供はしないこととします。(身内しか見てないし)<br>
+                    他にも、おそらく高校生としてこのサイトを開発できるであろう1年3ヶ月の間(時期未定)に繁体中国語版(台湾)ページを公開したいなと<br>
+                    台湾版には日本語と同等のサービスを提供したいところ。ただ、中国語(普通語)はやったけど台湾華語はやったことないから頑張らないとな<br>
+                    <br>
+                    <h3>英語版追加に関してお知らせ</h3>
+                    英語版追加と同時にこの日本語版のURL(サイト上のディレクトリ)が<br>
+                    <u>"pentees.github.io/HP/"から"pentees.github.io/ja-JP/"となり、"pentees.github.io/HP/"アクセスすると404が出るか、一部の人は英語版に飛ばされます。<br></u>
+                    ほとんどの方には全く関係がことですが今一度、お使いのブラウザの言語設定をご確認ください<br>
+                    <br>
+                    <h3>お負け</h3>
+                    台湾ねぇ、小さな国だけど大切にしたほうがいいよ、昔植民地支配したのに、日本大事にしてくださるからね<br>
+                    <br>
+                    2024.8.25(Sun) 17:45(JST/UTC+9)<br>
+                </div>
+                <div id="blog_content">
+                    <div style="text-align: center;">
+                    <br>
+                    </div>
+                    <div style="display: flow-root;">
+                        <div style="float: left; padding-left: 10px;">
+                            <a href="./24.html">前の投稿へ</a>
+                        </div>
+                        <div style="float: right; padding-right: 10px;">
+                            <a href="./28.html">次の投稿へ</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" style="display: inline;"></div>
+            <script src="/common/cheet.min.js" type="text/javascript"></script>
+            <script>
+                cheet('t o p', function()
+                {
+                    window.location.href = "../../../"
+                });
+                cheet('u p', function()
+                {
+                    window.location.href = "../"
+                });
+                cheet('c d', function()
+                {
+                    window.location.href = "./"
+                });
+                cheet('b a c k', function()
+                {
+                    history.back();
+                });
+                cheet('n e x t', function()
+                {
+                    alert("最新の投稿です。")
+                });
+                cheet('p r e v i o u s', function()
+                {
+                    window.location.href = "./24.html"
+                });
+     </Script>
+        </div>
+    </body>
+</html>
